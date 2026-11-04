@@ -1,1 +1,5 @@
-This is my first tailwind project.
+## Tailwind Project
+- Navbar Part Added
+- Header Part Added
+- Services Part Added
+- Contact Part Added
