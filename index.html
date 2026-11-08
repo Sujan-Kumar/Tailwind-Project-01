@@ -1,277 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind Project</title>
+    <title>Coding World</title>
     <!-- CSS Link -->
      <link rel="stylesheet" href="./css/main.css">
+
+     <style>
+        section[id]{
+            scroll-margin-top: 85px;
+        }
+     </style>
 </head>
+<body class="bg-slate-50 text-slate-800">
 
-<body class="bg-[#282D33]">
-
-    <!-- Navigation Bar Design Code: Start -->
-    <nav class="bg-[#282D33] shadow-xl sticky top-0 z-10">
-        <div class="container mx-auto">
-            <div class="sm:flex justify-between py-6 items-center">
+   <!-- ====================NAVBAR=================== -->
+    <header class="bg-[#064E5B] shadow-lg">
+       <nav class="container mx-auto px-4 py-4 relative">
+            <div class="flex justify-between items-center">
 
                 <!-- Logo -->
-                <div class="text-center mb-3 sm:mb-0">
-                    <a class="text-white text-xl sm:text-2xl md:text-3xl font-bold" href="#">
-                        <span class="text-[#F65023]">C</span>oding Wo<sapn class="text-[#F65023]">rld</sapn>
-                    </a>
-                </div>
-                <ul class="text-sm sm:text-xl text-center border-t sm:border-none text-white sm:flex">
-                    <li class="mt-4 sm:mt-0"><a class="p-3 text-[#F65023]" href="#">Home</a></li>
-                    <li><a class="p-3 transition hover:text-[#F65023]" href="#">About</a></li>
-                    <li><a class="p-3 transition hover:text-[#F65023]"  href="#">Products</a></li>
-                    <li><a class="p-3 transition hover:text-[#141413]" href="#">Blogs</a></li>
-                    <li><a class="p-3 transition hover:hover:text-[#F65023]" href="#">Portfolio</a></li>
-                    <li><a class="p-3 transition hover:hover:text-[#F65023]" href="#">Contact</a></li>
+                <a class="text-2xl font-extrabold text-white" href="#home">Coding <span class="text-cyan-300">World</span></a>
+
+
+                <!-- Mobile Menu Checkbox -->
+                 <input 
+                        type="checkbox"
+                        id="menu-toggle"
+                        class="peer sr-only"
+                        >
+
+                <!-- Hamburger Menu -->
+                 <label 
+                      for="menu-toggle"
+                      class="cursor-pointer text-3xl text-cyan-200 hover:text-white md:hidden" >
+                      ☰
+                    </label>
+                    
+                <!-- Navigation Links -->
+                <ul class="bg-[#064E5B] hidden peer-checked:flex flex-col
+                            text-center absolute top-full left-0 w-full shadow-xl border-t
+                            border-cyan-800 space-y-5 md:static md:flex md:flex-row md:items-center 
+                            md:space-y-0 md:space-x-7 md:bg-transparent md:w-auto md:py-0 
+                            md:shadow-none md:border-0">
+                    <li>
+                        <a href="#home"
+                           class="font-medium text-white
+                           hover:text-cyan-300 transition">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services"
+                           class="font-medium text-white
+                           hover:text-cyan-300 transition">
+                          Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#clients"
+                           class="font-medium text-white
+                           hover:text-cyan-300 transition">
+                           Clients
+                      </a>
+                    </li>
+                    <li>
+                        <a href="#contact"
+                           class="font-medium text-white
+                           hover:text-cyan-300 transition">
+                           Contact
+                      </a>
+                    </li>
+                    <li>
+                        <a href="#pricing"
+                           class="font-medium text-white
+                           hover:text-cyan-300 transition">
+                          Pricing
+                      </a>
+                    </li>
+                    <li>
+                        <a href="#contact"
+                           class="inline-block rounded-full
+                           bg-cyan-400 px-6 py-2 
+                           font-bold text-[#083344]
+                           hover:bg-white transition">
+                          Get Started
+                      </a>
+                    </li>
                 </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Navigation Bar Design Code: End -->
+        </div>  
+       </nav>
+    </header>
 
-
-    <!-- Hero Area Design Code: Start -->
-     <header>
-        <div class="text-white text-center sm:flex justify-around container mx-auto border border-indigo-600 border-t-0 items-center h-[80vh] px-10 pt-10">
-            <div>
-                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-5 sm:mb-10">For Enthusiastic Coders <br>Learn Quality Coding</h1>
-                <button class="bg-indigo-900 hover:bg-indigo-950 transition px-7 py-3 g; rounded-full text-[15px] md:text-2xl shadow">Join With Coding World <svg class="w-7 inline-block text-red-500 text-sm ml-2 animate-ping" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" /></svg></button>
-            </div>
-            <div>
-                <img class="animate-pulse" src="./images/hero-img.png" alt="Hero_Area_Image">
-            </div>
-        </div>
-     </header>
-    <!-- Hero Area Design Code: End -->
-
-
-    <!-- Main Area Design Code: Start -->
-    <main class="container mx-auto">
-        <section class="my-24">
-            <h2 class="text-white text-3xl text-center mb-12">Our Services</h2>
-
-            <div class="grid  md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="bg-gray-800 p-8 rounded-lg text-center border-4 border-[#1f2937] hover:border-indigo-700 cursor-pointer">
-                    <img class="w-1/2 mx-auto" src="./images/frontEnd.png" alt="Front_End_Image">
-                    <h4 class="text-white text-lg underline underline-offset-8 my-3">Front End Development</h4>
-                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-lg text-center border-4 border-[#1f2937] hover:border-indigo-700 cursor-pointer">
-                    <img class="w-1/2 mx-auto" src="./images/frontEnd.png" alt="Front_End_Image">
-                    <h4 class="text-white text-lg underline underline-offset-8 my-3">Back End Development</h4>
-                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-lg text-center border-4 border-[#1f2937] hover:border-indigo-700 cursor-pointer">
-                    <img class="w-1/2 mx-auto" src="./images/frontEnd.png" alt="Front_End_Image">
-                    <h4 class="text-white text-lg underline underline-offset-8 my-3">JavaScript Complete Course</h4>
-                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-lg text-center border-4 border-[#1f2937] hover:border-indigo-700 cursor-pointer">
-                    <img class="w-1/2 mx-auto" src="./images/frontEnd.png" alt="Front_End_Image">
-                    <h4 class="text-white text-lg underline underline-offset-8 my-3">Next.Js Complete Course</h4>
-                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-lg text-center border-4 border-[#1f2937] hover:border-indigo-700 cursor-pointer">
-                    <img class="w-1/2 mx-auto" src="./images/frontEnd.png" alt="Front_End_Image">
-                    <h4 class="text-white text-lg underline underline-offset-8 my-3">React.Js Complete Course</h4>
-                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-lg text-center border-4 border-[#1f2937] hover:border-indigo-700 cursor-pointer">
-                    <img class="w-1/2 mx-auto" src="./images/frontEnd.png" alt="Front_End_Image">
-                    <h4 class="text-white text-lg underline underline-offset-8 my-3">MongoDB for Your Database</h4>
-                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                </div>
-            </div>
-        </section>
-
-        
-        <!-- Clients Area Design -->
-        <section class="bg-slate-900 py-16 mb-24 md:py-48 grid place-items-center text-center">
-            <div class="md:flex justify-center items-center text-white gap:5 sm:gap-8 md:gap-12 md:gap-x-48">
-                <div class="text-lg sm:text-xl md:text-4xl mb-10">
-                    <p class="text-yellow-500 mb-5 animate-bounce">My Clients</p>
-                    <h2>My Take Care of <br> more <span class="underline decoration-orange-500 underline-offset-8">than 500k</span> <br> Customers</h2>
-                </div>
-                <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-8 md:gap-10">
-                    <div>
-                        <img src="./images/client-01.png" alt="Client_Img">
-                        <h3>One Plus</h3>
-                    </div>
-                    <div>
-                        <img src="./images/client-02.png" alt="Client_Img">
-                        <h3>Tancent</h3>
-                    </div>
-                    <div>
-                        <img src="./images/client-03.png" alt="Client_Img">
-                        <h3>Apple</h3>
-                    </div>
-                    <div>
-                        <img src="./images/client-04.png" alt="Client_Img">
-                        <h3>Microsoft</h3>
-                    </div>
-                    <div>
-                        <img src="./images/client-05.png" alt="Client_Img">
-                        <h3>Lenovo</h3>
-                    </div>
-                    <div>
-                        <img src="./images/client-06.png" alt="Client_Img">
-                        <h3>Huawei</h3>
-                    </div>
-                    <div>
-                        <img src="./images/client-07.png" alt="Client_Img">
-                        <h3>Nexus</h3>
-                    </div>
-                    <div>
-                        <img src="./images/client-08.png" alt="Client_Img">
-                        <h3>Tesla</h3>
-                    </div>
-                    <div>
-                        <img src="./images/client-09.png" alt="Client_Img">
-                        <h3>Brave</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Form Design Codes -->
-        <section class="bg-[#1f2937] py-16 sm:py-24">
-            <h3 class="text-center text-xl sm:text-3xl mb-10 text-white">Ask a Question</h3>
-            <form>
-                <input class="block mx-auto w-5/6 sm:w-1/2 h-12 border-2 border-orange-800 rounded placeholder:italic placeholder:text-orange-800 px-5 m-10" type="email" name="id" placeholder="Enter Your Email">
-
-              <textarea class="block mx-auto w-5/6 sm:w-1/2 h-52 border-2 placeholder:italic placeholder:text-orange-800 border-orange-800 px-5 py-5" placeholder="Write Your Question Here"></textarea>
-              <button class="block mx-auto bg-green-900 px-6 py-3 text-white text-xl mt-8 rounded hover:bg-green-600 transition">Send Now</button>
-            </form>
-        </section>
-
-        <!-- Card Section Codes -->
-        <section class="bg-slate-900 my-16 sm:my-20 py-12 sm:py-24">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-16 md:gap-20 justify-center items-center text-white">
-                <div class="border p-10">
-                    <h5>Basic Plane</h5>
-                    <h2>$<span class="text-xl sm:text-2xl md:text-5xl font-bold">19.00</span>/month</h2>
-                    <hr class="my-10">
-                    <ul class="list-disc list-inside leading-10 text-xl">
-                        <li>5000 User Activities</li>
-                        <li>Unlimited Access</li>
-                        <li>No Hidden Charge</li>
-                        <li>03 Time Updates</li>
-                        <li>Figma Source File</li>
-                        <li>Many More Facilities</li>
-                    </ul>
-                    <button class="bg-green-900 mt-10 hover:bg-green-600 transition px-5 py-2 text-xl">Purchase</button>
-                </div>
-
-                 <div class="border p-10">
-                    <h5>Basic Plane</h5>
-                    <h2>$<span class="text-xl sm:text-2xl md:text-5xl font-bold">19.00</span>/month</h2>
-                    <hr class="my-10">
-                    <ul class="list-disc list-inside leading-10 text-xl">
-                        <li>5000 User Activities</li>
-                        <li>Unlimited Access</li>
-                        <li>No Hidden Charge</li>
-                        <li>03 Time Updates</li>
-                        <li>Figma Source File</li>
-                        <li>Many More Facilities</li>
-                    </ul>
-                    <button class="bg-green-900 mt-10 hover:bg-green-600 transition px-5 py-2 text-xl">Purchase</button>
-                </div>
-
-                 <div class="border p-10">
-                    <h5>Basic Plane</h5>
-                    <h2>$<span class="text-xl sm:text-2xl md:text-5xl font-bold">19.00</span>/month</h2>
-                    <hr class="my-10">
-                    <ul class="list-disc list-inside leading-10 text-xl">
-                        <li>5000 User Activities</li>
-                        <li>Unlimited Access</li>
-                        <li>No Hidden Charge</li>
-                        <li>03 Time Updates</li>
-                        <li>Figma Source File</li>
-                        <li>Many More Facilities</li>
-                    </ul>
-                    <button class="bg-green-900 mt-10 hover:bg-green-600 transition px-5 py-2 text-xl">Purchase</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter Section Codes -->
-        <section class="bg-lime-950 my-10 sm:my-16 md:my-20 lg:my-32 py-10 sm:py-16 md:py-20 bg-no-repeat bg-left" style="background-image: url(./images/subscribe-bg.png);">
-
-            <div class="sm:flex justify-center items-center text-white gap-10 sm:gap-16 md:gap-20 lg:gap-32">
-                <div class="text-center mb-10 sm:mb-0 sm:border-r-2 sm:pr-28">
-                    <h2 class="text-xl"> Newsletter Subscription </h2>
-                    <p> Get subscribed to our newsletter & receive latest lorem updates </p>
-                </div>
-
-                <div class="flex justify-center items-center gap-1">
-                    <input class="h-10 border-none px-2" type="email" placeholder="E-mail">
-                    <button class="bg-red-900 px-5 py-2 hover:bg-red-600 transition"> Subscribe </button>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- Main Area Design Code: End -->
-
-    <!-- Footer Section Codes: Start -->
-     <footer>
-        <div class="container mx-auto text-center sm:text-left">
-            <div class="sm:flex justify-around text-white">
-                <div>
-                    <h2 class="text-xl sm:text-2xl mb-5"> My Account </h2>
-                        <ul class="leading-10">
-                            <li> <a href="#"> Creator Dashboard </a> </li>
-                            <li> <a href="#"> Wallet </a> </li>
-                            <li> <a href="#"> Create Item </a> </li>
-                            <li> <a href="#"> My Account </a> </li>
-                        </ul>   
-                </div>
-
-                <div>
-                    <h2 class="text-xl sm:text-2xl mb-5"> Web Links </h2>
-                        <ul class="leading-10">
-                            <li> <a href="#"> Collections </a> </li>
-                            <li> <a href="#"> Item Details </a> </li>
-                            <li> <a href="#"> Rankings </a> </li>
-                            <li> <a href="#"> User Profile </a> </li>
-                        </ul>   
-                </div>
-
-                <div>
-                    <h2 class="text-xl sm:text-2xl mb-5"> Community </h2>
-                        <ul class="leading-10">
-                            <li> <a href="#"> Blog Category </a> </li>
-                            <li> <a href="#"> Blog Author </a> </li>
-                            <li> <a href="#"> Blog </a> </li>
-                            <li> <a href="#"> Blog Details </a> </li>
-                        </ul>   
-                </div>
-
-                <div>
-                        <h2 class="text-xl sm:text-2xl mb-5"> Contact </h2>
-                         <ul class="leading-10">
-                            <li> <a href="#"> Dhaka, P.O. 1334 Road, Bangaladesh </a> </li>
-                            <li> <a href="#"> BD Author </a> </li>
-                            <li> <a href="#"> author@gmail.com </a> </li>
-                            <li> <a href="#"> Phone: 01777777777 </a> </li>
-                         </ul>   
-                    </div>
-            </div>
-
-            <hr class="my-16">
-            
-            <div class="text-white sm:flex justify-between mb-20">
-                <p> &copy; Copyright - 2026 - Designed by <span class="text-green-700"> Coding World IT Team [Demo Project] </span> </p>
-
-                <p> Privacy Policy | Term of Service </p>
-            </div>
-        </div>
-     </footer>
-    <!-- Footer Section Codes: End -->
-     
 </body>
 </html>
