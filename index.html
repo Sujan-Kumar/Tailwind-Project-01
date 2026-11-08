@@ -1,97 +1,662 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding World</title>
     <!-- CSS Link -->
-     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.css" />
 
-     <style>
-        section[id]{
-            scroll-margin-top: 85px;
-        }
-     </style>
-</head>
-<body class="bg-slate-50 text-slate-800">
+    <style>
+      section[id] {
+        scroll-margin-top: 85px;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800">
+    <!-- ====================NAVBAR=================== -->
+    <header class="bg-[#064E5B] shadow-xl sticky top-0 z-50">
+      <nav class="container mx-auto px-4 py-4 relative">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <a class="text-2xl font-extrabold text-white" href="#home"
+            >Coding <span class="text-cyan-300">World</span></a
+          >
 
-   <!-- ====================NAVBAR=================== -->
-    <header class="bg-[#064E5B] shadow-lg">
-       <nav class="container mx-auto px-4 py-4 relative">
-            <div class="flex justify-between items-center">
+          <!-- Mobile Menu Checkbox -->
+          <input type="checkbox" id="menu-toggle" class="peer sr-only" />
 
-                <!-- Logo -->
-                <a class="text-2xl font-extrabold text-white" href="#home">Coding <span class="text-cyan-300">World</span></a>
+          <!-- Hamburger Menu -->
+          <label
+            for="menu-toggle"
+            class="cursor-pointer text-3xl text-cyan-200 hover:text-white md:hidden"
+          >
+            ☰
+          </label>
 
-
-                <!-- Mobile Menu Checkbox -->
-                 <input 
-                        type="checkbox"
-                        id="menu-toggle"
-                        class="peer sr-only"
-                        >
-
-                <!-- Hamburger Menu -->
-                 <label 
-                      for="menu-toggle"
-                      class="cursor-pointer text-3xl text-cyan-200 hover:text-white md:hidden" >
-                      ☰
-                    </label>
-                    
-                <!-- Navigation Links -->
-                <ul class="bg-[#064E5B] hidden peer-checked:flex flex-col
-                            text-center absolute top-full left-0 w-full shadow-xl border-t
-                            border-cyan-800 space-y-5 md:static md:flex md:flex-row md:items-center 
-                            md:space-y-0 md:space-x-7 md:bg-transparent md:w-auto md:py-0 
-                            md:shadow-none md:border-0">
-                    <li>
-                        <a href="#home"
-                           class="font-medium text-white
-                           hover:text-cyan-300 transition">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#services"
-                           class="font-medium text-white
-                           hover:text-cyan-300 transition">
-                          Services
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#clients"
-                           class="font-medium text-white
-                           hover:text-cyan-300 transition">
-                           Clients
-                      </a>
-                    </li>
-                    <li>
-                        <a href="#contact"
-                           class="font-medium text-white
-                           hover:text-cyan-300 transition">
-                           Contact
-                      </a>
-                    </li>
-                    <li>
-                        <a href="#pricing"
-                           class="font-medium text-white
-                           hover:text-cyan-300 transition">
-                          Pricing
-                      </a>
-                    </li>
-                    <li>
-                        <a href="#contact"
-                           class="inline-block rounded-full
-                           bg-cyan-400 px-6 py-2 
-                           font-bold text-[#083344]
-                           hover:bg-white transition">
-                          Get Started
-                      </a>
-                    </li>
-                </ul>
-        </div>  
-       </nav>
+          <!-- Navigation Links -->
+          <ul
+            class="bg-[#064E5B] hidden peer-checked:flex flex-col text-center absolute top-full left-0 w-full shadow-xl border-t border-cyan-800 space-y-5 py-6 md:static md:flex md:flex-row md:items-center md:space-y-0 md:space-x-7 md:bg-transparent md:w-auto md:py-0 md:shadow-none md:border-0"
+          >
+            <li>
+              <a
+                href="#home"
+                class="font-medium text-white hover:text-cyan-300 transition"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="font-medium text-white hover:text-cyan-300 transition"
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="#clients"
+                class="font-medium text-white hover:text-cyan-300 transition"
+              >
+                Clients
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="font-medium text-white hover:text-cyan-300 transition"
+              >
+                Contact
+              </a>
+            </li>
+            <li>
+              <a
+                href="#pricing"
+                class="font-medium text-white hover:text-cyan-300 transition"
+              >
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="inline-block rounded-full bg-cyan-400 px-6 py-2 font-bold text-[#083344] hover:bg-white transition"
+              >
+                Get Started
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
+
+    <!--================ HERO SECTION================= -->
+    <section
+      id="home"
+      class="bg-gradient-to-br from-blue-100 via-indigo-100 to-violet-200"
+    >
+      <div
+        class="container mx-auto px-5 py-20 flex flex-col items-center md:flex-row gap-12"
+      >
+        <div class="w-full md:w-1/2">
+          <p class="mb-4 font-bold uppercase tracking-widest text-violet-700">
+            Welcome To Coding World
+          </p>
+
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#172554] leading-tight"
+          >
+            Learn Coding <br />
+            <span class="text-violet-700">Build Your Future</span>
+          </h1>
+
+          <p class="mt-6 text-lg leading-relaxed text-slate-600">
+            Learn Modern Web Development Skills and Build Beautiful Websites
+            with Practical Projects.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              href="#services"
+              class="rounded-lg bg-violet-600 px-7 py-3 font-blod text-white shadow-lg animate-pulse hover:bg-violet-700 transition"
+            >
+              Explore Courses
+            </a>
+            <a
+              href="#contact"
+              class="rounded-lg border-2 border-[#172554] px-7 py-3 font-bold text-[#172554] hover:bg-[#172554] hover:text-white transion"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2">
+          <img
+            src="./images/banner_img.png"
+            alt="Coding illustration"
+            class="mx-auto w-full max-w-lg rounded-3xl shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--================ SERVICE SECTION================= -->
+    <section id="services" class="bg-white py-20">
+      <div class="container mx-auto px-5">
+        <div class="mb-12 text-center">
+          <p
+            class="font-bold text-sm sm:text-xl uppercase tracking-widest text-green-600 animate-bounce"
+          >
+            What We Offer
+          </p>
+          <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-[#172554]">
+            Our Services
+          </h2>
+          <p class="mt-4 text-slate-500">
+            Improve Your Skills with Our Learning Sources
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
+        >
+          <!-- Web Development -->
+          <div
+            class="border broder-blue-100 bg-blue-50 p-8 shadow-sm flex flex-col rounded-2xl hover:-translate-y-2 hover:shadow-xl transition"
+          >
+            <div>
+              <div class="mb-5 text-4xl">💻</div>
+              <h3 class="text-xl font-bold text-blue-900">Web Development</h3>
+              <p class="mt-4 leading-relaxed text-slate-600">
+                Learn HTML, CSS, JavaScript and Modern Web Tecnhologies.
+              </p>
+            </div>
+            <a
+              href="#contact"
+              class="mt-auto pt-6 inline-block font-bold text-blue-700 hover:text-blue-900"
+            >
+              Learn More →
+            </a>
+          </div>
+          <!-- React Development -->
+          <div
+            class="flex flex-col border border-purple-100 bg-purple-50 p-8 shadow-sm rounded-2xl hover:-translate-y-2 hover:shadow-xl transition"
+          >
+            <div>
+              <div class="mb-5 text-4xl">⚛️</div>
+              <h3 class="text-xl font-bold text-purple-900">
+                React Development
+              </h3>
+
+              <p class="mt-4 leading-relaxed text-slate-600">
+                Build Interactive Applications using React.
+              </p>
+            </div>
+
+            <a
+              href="#contact"
+              class="mt-auto pt-6 inline-block font-bold text-purple-700 hover:text-purple-900"
+            >
+              Learn More →
+            </a>
+          </div>
+
+          <!-- UI Design -->
+          <div
+            class="flex flex-col rounded-2xl border border-emerald-100 bg-emerald-50 p-8 shadow-sm hover:-translate-y-2 hover:shadow-xl transition"
+          >
+            <div>
+              <div class="mb-5 text-4xl">🎨</div>
+
+              <h3 class="text-xl font-bold text-emerald-900">UI Design</h3>
+
+              <p class="mt-4 leading-relaxed text-slate-600">
+                Create Attractive and Responsive User Interfaces.
+              </p>
+            </div>
+
+            <a
+              href="#contact"
+              class="mt-auto pt-6 inline-block font-bold text-emerald-700 hover:text-emerald-900"
+            >
+              Learn More →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--================ CLIENTS SECTION================= -->
+    <section id="clients" class="bg-[#F3E8FF] py-20">
+      <div class="container mx-auto px-5 text-center">
+        <p class="font-bold uppercase tracking-widest text-purple-700">
+          Our Partners
+        </p>
+        <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-purple-950">
+          Our Valuable Clients
+        </h2>
+        <p class="mx-auto mt-4 max-w-xl text-slate-600">
+          We Believe in Building Strong Relationships and Delevering Quality
+          Solutions.
+        </p>
+
+        <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div
+            class="rounded-xl bg-white p-7 shadow-sm font-bold text-slate-700"
+          >
+            Google
+          </div>
+          <div
+            class="rounded-xl bg-white p-7 shadow-sm font-bold text-slate-700"
+          >
+            Microsoft
+          </div>
+          <div
+            class="rounded-xl bg-white p-7 shadow-sm font-bold text-slate-700"
+          >
+            Amazon
+          </div>
+          <div
+            class="rounded-xl bg-white p-7 shadow-sm font-bold text-slate-700"
+          >
+            Meta
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================CONTACT SECTION================== -->
+    <section id="contact" class="bg-white py-20">
+      <div class="container mx-auto px-5">
+
+        <div class="mb-12 text-center">
+          <p class="font-bold uppercase tracking-widest">Get In Touch</p>
+          <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-[#172554]">
+            Contact US
+          </h2>
+        </div>
+
+        <form class="mx-auto max-w-2xl space-y-5 rounded-2xl bg-slate-50 p-6 md:p-10 shadow-lg">
+          <div>
+              <label for="name" class="mb-2 block font-semibold text-slate-700">
+                Your Name
+              </label>
+
+              <input type="text" id="name" placeholder="Enter Your Name" 
+                     class="w-full rounded-lg border border-slate-300 
+                     bg-white px-4 py-3 outline-none focus:ring-2
+                     focus:ring-violet-200">
+          </div>
+
+          <div>
+              <label for="email" class="mb-2 block font-semibold text-slate-700">
+                Your Name
+              </label>
+
+              <input type="text" id="email" placeholder="Enter Your Email Address" 
+                     class="w-full rounded-lg border border-slate-300 
+                     bg-white px-4 py-3 outline-none focus:ring-2
+                     focus:ring-violet-200">
+          </div>
+
+          <div>
+              <label for="message" class="mb-2 block font-semibold text-slate-700">
+                Your Name
+              </label>
+
+              <textarea type="text" rows="5" id="message" placeholder="Write Your Message......." 
+                     class="w-full rounded-lg border border-slate-300 
+                     bg-white px-4 py-3 outline-none focus:ring-2
+                     focus:ring-violet-200">
+              </textarea>
+          </div>
+
+          <button type="submit"
+                  class="w-full rounded-lg bg-violet-600
+                  py-3 font-bold text-white hover:bg-violet-700 transition">
+                  Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= PRICING SECTION ================= -->
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="bg-[#172554] py-20">
+
+      <div class="container mx-auto px-5">
+
+        <!-- Section Heading -->
+        <div class="mb-12 text-center">
+
+          <p class="font-bold uppercase tracking-widest
+            text-violet-300">
+            Choose Your Plan
+          </p>
+
+          <h2 class="mt-3 text-3xl md:text-4xl
+            font-extrabold text-white">
+            Our Pricing Plans
+          </h2>
+
+          <p class="mt-4 text-blue-200">
+            Select the best plan for your learning journey.
+          </p>
+
+        </div>
+
+
+        <!-- Pricing Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2
+          xl:grid-cols-3 gap-8 items-stretch">
+
+
+          <!-- BASIC PLAN -->
+          <div class="flex flex-col rounded-2xl
+            bg-white p-8 shadow-xl
+            hover:-translate-y-2 transition">
+
+            <div>
+              <h3 class="text-xl font-bold text-[#172554]">
+                Basic Plan
+              </h3>
+
+              <p class="mt-5 text-4xl font-extrabold text-blue-700">
+                $19
+                <span class="text-base font-medium text-slate-500">
+                  /mo
+                </span>
+              </p>
+
+              <p class="mt-4 text-slate-500">
+                Perfect for beginners who want to start learning.
+              </p>
+            </div>
+
+            <ul class="mt-8 flex-1 space-y-4 text-slate-600">
+              <li>✓ Beginner Courses</li>
+              <li>✓ Basic Projects</li>
+              <li>✓ Email Support</li>
+              <li>✓ Learning Resources</li>
+            </ul>
+
+            <a href="#contact"
+              class="mt-auto block rounded-lg bg-blue-600
+              py-3 text-center font-bold text-white
+              hover:bg-blue-700 transition">
+              Get Started
+            </a>
+
+          </div>
+
+
+          <!-- STANDARD PLAN -->
+          <div class="relative flex flex-col rounded-2xl
+            border-4 border-violet-400 bg-violet-50
+            p-8 shadow-2xl hover:-translate-y-2 transition">
+
+            <span class="absolute top-0 left-1/2 -translate-x-1/2
+              -translate-y-1/2 rounded-full
+              bg-violet-600 px-5 py-1
+              text-sm font-bold text-white">
+              Popular
+            </span>
+
+            <div>
+              <h3 class="text-xl font-bold text-purple-950">
+                Standard Plan
+              </h3>
+
+              <p class="mt-5 text-4xl font-extrabold text-violet-700">
+                $39
+                <span class="text-base font-medium text-slate-500">
+                  /mo
+                </span>
+              </p>
+
+              <p class="mt-4 text-slate-600">
+                Great for learners who want advanced skills.
+              </p>
+            </div>
+
+            <ul class="mt-8 flex-1 space-y-4 text-slate-600">
+              <li>✓ All Basic Features</li>
+              <li>✓ Advanced Projects</li>
+              <li>✓ Priority Support</li>
+              <li>✓ Practical Assignments</li>
+              <li>✓ Certificate</li>
+            </ul>
+
+            <a href="#contact"
+              class="mt-auto block rounded-lg bg-violet-600
+              py-3 text-center font-bold text-white
+              hover:bg-violet-700 transition">
+              Get Started
+            </a>
+
+          </div>
+
+
+          <!-- PREMIUM PLAN -->
+          <div class="flex flex-col rounded-2xl
+            bg-emerald-50 p-8 shadow-xl
+            hover:-translate-y-2 transition">
+
+            <div>
+              <h3 class="text-xl font-bold text-emerald-950">
+                Premium Plan
+              </h3>
+
+              <p class="mt-5 text-4xl font-extrabold text-emerald-700">
+                $59
+                <span class="text-base font-medium text-slate-500">
+                  /mo
+                </span>
+              </p>
+
+              <p class="mt-4 text-slate-600">
+                Complete learning experience with personal guidance.
+              </p>
+            </div>
+
+            <ul class="mt-8 flex-1 space-y-4 text-slate-600">
+              <li>✓ All Standard Features</li>
+              <li>✓ Real World Projects</li>
+              <li>✓ Personal Mentorship</li>
+              <li>✓ One-to-One Support</li>
+              <li>✓ Career Guidance</li>
+              <li>✓ Premium Resources</li>
+            </ul>
+
+            <a href="#contact"
+              class="mt-auto block rounded-lg bg-emerald-600
+              py-3 text-center font-bold text-white
+              hover:bg-emerald-700 transition">
+              Get Started
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= NEWSLETTER SECTION ================= -->
+
+    <section class="bg-amber-100 py-16">
+
+      <div class="container mx-auto px-5
+        flex flex-col md:flex-row
+        items-center justify-between gap-8">
+
+        <div>
+
+          <h2 class="text-2xl md:text-3xl
+            font-extrabold text-amber-950">
+            Subscribe to Our Newsletter
+          </h2>
+
+          <p class="mt-3 text-amber-900">
+            Get the latest coding updates and learning resources.
+          </p>
+
+        </div>
+
+        <form class="flex w-full max-w-lg
+          flex-col sm:flex-row gap-3">
+
+          <input type="email"
+            placeholder="Enter your email"
+            class="min-w-0 flex-1 rounded-lg
+            border border-amber-300 bg-white
+            px-4 py-3 outline-none
+            focus:ring-2 focus:ring-amber-400">
+
+          <button type="submit"
+            class="rounded-lg bg-amber-600 px-6 py-3
+            font-bold text-white hover:bg-amber-700
+            transition">
+            Subscribe
+          </button>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-[#0F172A] py-12 text-white">
+
+      <div class="container mx-auto px-5">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2
+          lg:grid-cols-4 gap-10">
+
+          <!-- Footer Logo -->
+          <div>
+
+            <h3 class="text-2xl font-extrabold">
+              <a href="#home">
+                Coding
+              <span class="text-violet-400">World</span>
+              </a>
+            </h3>
+
+            <p class="mt-4 leading-relaxed text-slate-400">
+              Learn, practice and build your future
+              with modern web development.
+            </p>
+
+          </div>
+
+
+          <!-- Quick Links -->
+          <div>
+
+            <h3 class="mb-4 text-lg font-bold text-violet-300">
+              Quick Links
+            </h3>
+
+            <ul class="space-y-3 text-slate-400">
+
+              <li>
+                <a href="#home" class="hover:text-white transition">
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a href="#services" class="hover:text-white transition">
+                  Services
+                </a>
+              </li>
+
+              <li>
+                <a href="#clients" class="hover:text-white transition">
+                  Clients
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- Resources -->
+          <div>
+
+            <h3 class="mb-4 text-lg font-bold text-violet-300">
+              Resources
+            </h3>
+
+            <ul class="space-y-3 text-slate-400">
+
+              <li>
+                <a href="#contact" class="hover:text-white transition">
+                  Contact
+                </a>
+              </li>
+
+              <li>
+                <a href="#pricing" class="hover:text-white transition">
+                  Pricing
+                </a>
+              </li>
+
+              <li>
+                <a href="#services" class="hover:text-white transition">
+                  Courses
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- Social Links -->
+          <div>
+
+            <h3 class="mb-4 text-lg font-bold text-violet-300">
+              Follow Us
+            </h3>
+
+            <p class="text-slate-400">
+              Stay connected with Coding World.
+            </p>
+
+            <div class="mt-4 flex gap-4 text-violet-300">
+
+              <a href="#" class="hover:text-white transition">
+                Facebook
+              </a>
+
+              <a href="#" class="hover:text-white transition">
+                GitHub
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Copyright -->
+        <div class="mt-12 border-t border-slate-700
+          pt-6 text-center text-sm text-slate-400">
+
+          © 2026 Coding World. All Rights Reserved.<br>
+          <span>Demo Project</span>
+
+        </div>
+
+      </div>
+    </footer>
 
 </body>
 </html>
