@@ -3,5 +3,5 @@
 - Header Part Added
 - Services Part Added
 - Contact Part Added
-- Subscription Part Added
+- Newsletter Part Added
 - Footer Part Added
